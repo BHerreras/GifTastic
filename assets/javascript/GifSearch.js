@@ -62,12 +62,12 @@ $(document).ready(function () {
 	});
 
 	// This is  where I am trying to add a new button but it is not working!
-	$("#button-input").on("click", function (event) {
+	$("#button-form").on("submit", function (event) {
 		event.preventDefault();
 		var newAni = $('#button-input').val().trim();
 
 		// @ts-ignore
-		newAni.push(allButtons);
+		animals.push(newAni);
 
 		getButtons();
 	});
